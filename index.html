@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Covid-19 Estimator</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="form-wrap">
+      <form>
+        <div class="form-group">
+          <h1>Covid-19 Estimator</h1>
+          <label for="name">Region</label>
+          <input type="text" id="name" placeholder="Africa" required>
+        </div>
+
+        <div class="form-group">
+          <label for="avgAge">Region Average Age</label>
+          <input type="text" id="avgAge" placeholder="Enter an average for this Region" required>
+        </div>
+
+        <div class="form-group">
+          <label for="avgDailyIncomeInUSD">Region Average Daily Income in USD</label>
+          <input type="text" id="avgDailyIncomeInUSD" placeholder="Enter an average daily income in USD">
+        </div>
+
+        <div class="form-group">
+          <label for="avgDailyIncomePopulation">Region Average Daily Income Population in percentage </label>
+          <input type="text" id="avgDailyIncomePopulation" placeholder="In % e.g 0.73">
+        </div>
+        <br>
+        <hr>
+
+        <div class="form-group sm">
+          <label for="timeToElapse">Time to Elapse</label>
+          <input type="number" min="0" id="timeToElapse" placeholder="In days/weeks/months" data-time-to-elapse>
+        </div>
+
+        <div class="select-group">
+          <p class="select-label">Period Type</p>
+          <select name="periodType" id="periodType" data-period-type>
+            <option value="days">days</option>
+            <option value="weeks">weeks</option>
+            <option value="months">months</option>
+          </select>
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="reportedCases">Report Cases</label>
+          <input type="number" id="reportedCases" placeholder="Enter the reported cases" data-reported-cases>
+        </div>
+
+        <div class="form-group">
+          <label for="population">Population</label>
+          <input type="number" id="population" placeholder="Enter the Region Population" data-population>
+        </div>
+
+        <div class="form-group">
+          <label for="totalHospitalBeds">Total Hospital Beds</label>
+          <input type="number" id="totalHospitalBeds" placeholder="Enter the total Hospital Beds"
+            data-total-hospital-beds>
+        </div>
+
+        <button type="submit" data-go-estimate>Estimate</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
