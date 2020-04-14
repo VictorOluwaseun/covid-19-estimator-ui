@@ -11,11 +11,13 @@
 </head>
 
 <body>
-  <div id="container">
+  <main id="container">
     <div class="form-wrap">
       <form>
-        <div class="form-group">
+        <section>
           <h1>Covid-19 Estimator</h1>
+        </section>
+        <div class="form-group">
           <label for="name">Region</label>
           <input type="text" id="name" placeholder="Africa" required>
         </div>
@@ -27,19 +29,20 @@
 
         <div class="form-group">
           <label for="avgDailyIncomeInUSD">Region Average Daily Income in USD</label>
-          <input type="text" id="avgDailyIncomeInUSD" placeholder="Enter an average daily income in USD">
+          <input type="text" id="avgDailyIncomeInUSD" placeholder="Enter an average daily income in USD" required>
         </div>
 
         <div class="form-group">
           <label for="avgDailyIncomePopulation">Region Average Daily Income Population in percentage </label>
-          <input type="text" id="avgDailyIncomePopulation" placeholder="In % e.g 0.73">
+          <input type="text" id="avgDailyIncomePopulation" placeholder="In % e.g 0.73" required>
         </div>
         <br>
         <hr>
 
         <div class="form-group sm">
           <label for="timeToElapse">Time to Elapse</label>
-          <input type="number" min="0" id="timeToElapse" placeholder="In days/weeks/months" data-time-to-elapse>
+          <input type="number" min="0" id="timeToElapse" placeholder="In days/weeks/months" data-time-to-elapse
+            required>
         </div>
 
         <div class="select-group">
@@ -55,24 +58,24 @@
 
         <div class="form-group">
           <label for="reportedCases">Report Cases</label>
-          <input type="number" id="reportedCases" placeholder="Enter the reported cases" data-reported-cases>
+          <input type="number" id="reportedCases" placeholder="Enter the reported cases" data-reported-cases required>
         </div>
 
         <div class="form-group">
           <label for="population">Population</label>
-          <input type="number" id="population" placeholder="Enter the Region Population" data-population>
+          <input type="number" id="population" placeholder="Enter the Region Population" data-population required>
         </div>
 
         <div class="form-group">
           <label for="totalHospitalBeds">Total Hospital Beds</label>
           <input type="number" id="totalHospitalBeds" placeholder="Enter the total Hospital Beds"
-            data-total-hospital-beds>
+            data-total-hospital-beds required>
         </div>
 
         <button type="submit" data-go-estimate>Estimate</button>
       </form>
     </div>
-  </div>
+  </main>
 </body>
 
 </html>
